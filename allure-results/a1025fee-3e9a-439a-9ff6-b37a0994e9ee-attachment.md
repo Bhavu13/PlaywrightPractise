@@ -1,0 +1,641 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: generalPractice\fixtureTest.spec.js >> Verify order creation
+- Location: tests\generalPractice\fixtureTest.spec.js:4:1
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded while setting up "loggedInPage".
+```
+
+```
+Error: locator.waitFor: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('.card-body b').first() to be visible
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - link "Logo" [ref=e7] [cursor=pointer]:
+        - /url: /admin/dashboard
+        - img "Logo" [ref=e8]
+      - link "" [ref=e9] [cursor=pointer]:
+        - /url: javascript:void(0);
+        - generic [ref=e10]: 
+      - text: 
+      - list [ref=e11]:
+        - listitem [ref=e12]:
+          - link "Super Admin Admin" [ref=e13] [cursor=pointer]:
+            - /url: javascript:void(0)
+            - img "Super Admin Admin" [ref=e15]
+    - list [ref=e21]:
+      - listitem [ref=e22]:
+        - link " Dashboard" [ref=e23] [cursor=pointer]:
+          - /url: /admin/dashboard
+          - generic [ref=e24]: 
+          - generic [ref=e25]: Dashboard
+      - listitem [ref=e26]:
+        - link " Facilities" [ref=e27] [cursor=pointer]:
+          - /url: /admin/facility
+          - generic [ref=e28]: 
+          - generic [ref=e29]: Facilities
+      - listitem [ref=e30]:
+        - link " Appointments" [ref=e31] [cursor=pointer]:
+          - /url: /admin/instant-appointment/select-patient
+          - generic [ref=e32]: 
+          - generic [ref=e33]: Appointments
+      - listitem [ref=e34]:
+        - link " Collaboration" [ref=e35] [cursor=pointer]:
+          - /url: /admin/collabration
+          - generic [ref=e36]: 
+          - generic [ref=e37]: Collaboration
+      - listitem [ref=e38]:
+        - link " Activity" [ref=e39] [cursor=pointer]:
+          - /url: /admin/activity
+          - generic [ref=e40]: 
+          - generic [ref=e41]: Activity
+      - listitem [ref=e42]:
+        - link " Care Plans" [ref=e43] [cursor=pointer]:
+          - /url: /admin/care-plans
+          - generic [ref=e44]: 
+          - generic [ref=e45]: Care Plans
+      - listitem [ref=e46]:
+        - link " Packages " [ref=e47] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e48]: 
+          - generic [ref=e49]: Packages
+          - generic [ref=e50]: 
+        - list
+      - listitem [ref=e51]:
+        - link " Laboratory" [ref=e52] [cursor=pointer]:
+          - /url: /admin/laboratory/facility
+          - generic [ref=e53]: 
+          - generic [ref=e54]: Laboratory
+    - generic [ref=e57]:
+      - generic [ref=e60]:
+        - heading "Welcome Super Admin!" [level=3] [ref=e61]
+        - list [ref=e62]:
+          - listitem [ref=e63]: Dashboard
+      - generic [ref=e64]:
+        - generic [ref=e67]:
+          - generic [ref=e68]:
+            - generic [ref=e70]: 
+            - heading "17" [level=3] [ref=e72]
+          - heading "Doctors" [level=6] [ref=e74]
+        - generic [ref=e79]:
+          - generic [ref=e80]:
+            - generic [ref=e82]: 
+            - heading "2698" [level=3] [ref=e84]
+          - heading "Patients" [level=6] [ref=e86]
+        - generic [ref=e91]:
+          - generic [ref=e92]:
+            - generic [ref=e94]: 
+            - heading "11" [level=3] [ref=e96]
+          - heading "Facilities" [level=6] [ref=e98]
+        - generic [ref=e103]:
+          - generic [ref=e104]:
+            - generic [ref=e106]: 
+            - heading "$62523" [level=3] [ref=e108]
+          - heading "Revenue" [level=6] [ref=e110]
+      - generic [ref=e113]:
+        - generic [ref=e115]:
+          - heading "Revenue" [level=4] [ref=e117]
+          - generic [ref=e122]:
+            - application "area chart with 1 data series" [ref=e123]:
+              - generic [ref=e139]:
+                - generic "2013" [ref=e140]
+                - generic "2014" [ref=e141]
+                - generic "2015" [ref=e142]
+                - generic "2016" [ref=e143]
+                - generic "2017" [ref=e144]
+                - generic "2018" [ref=e145]
+                - generic "2019" [ref=e146]
+              - generic [ref=e148]:
+                - generic "300" [ref=e149]
+                - generic "250" [ref=e150]
+                - generic "200" [ref=e151]
+                - generic "150" [ref=e152]
+                - generic "100" [ref=e153]
+                - generic "50" [ref=e154]
+            - tooltip: ●
+        - generic [ref=e156]:
+          - heading "Status" [level=4] [ref=e158]
+          - generic [ref=e163]:
+            - application "line chart with 2 data series" [ref=e164]:
+              - generic [ref=e184]:
+                - generic "2015" [ref=e185]
+                - generic "2016" [ref=e186]
+                - generic "2017" [ref=e187]
+                - generic "2018" [ref=e188]
+                - generic "2019" [ref=e189]
+              - generic [ref=e191]:
+                - generic "150" [ref=e192]
+                - generic "100" [ref=e193]
+                - generic "50" [ref=e194]
+                - generic "0" [ref=e195]
+            - tooltip: ● ●
+      - generic [ref=e196]:
+        - generic [ref=e198]:
+          - heading "Doctors List (17)" [level=4] [ref=e200]
+          - generic [ref=e203]:
+            - generic [ref=e205]:
+              - textbox "Search" [ref=e206] [cursor=pointer]
+              - generic [ref=e208]: 
+            - table [ref=e211]:
+              - rowgroup [ref=e212]:
+                - row "S.No Doctor Name Facility Name City Phone" [ref=e213]:
+                  - columnheader "S.No" [ref=e214]
+                  - columnheader "Doctor Name" [ref=e215]
+                  - columnheader "Facility Name" [ref=e216]
+                  - columnheader "City" [ref=e217]
+                  - columnheader "Phone" [ref=e218]
+              - rowgroup [ref=e219]:
+                - row "1 Dr.Rajeev . Eesha Multispeciality Hospital Bengaluru 7338293543" [ref=e220]:
+                  - cell "1" [ref=e221]
+                  - cell "Dr.Rajeev ." [ref=e222]
+                  - cell "Eesha Multispeciality Hospital" [ref=e223]
+                  - cell "Bengaluru" [ref=e224]
+                  - cell "7338293543" [ref=e225]
+                - row "2 Dr.Amruta , Vivaa Hospital Bengaluru 9035231600" [ref=e226]:
+                  - cell "2" [ref=e227]
+                  - cell "Dr.Amruta ," [ref=e228]
+                  - cell "Vivaa Hospital" [ref=e229]
+                  - cell "Bengaluru" [ref=e230]
+                  - cell "9035231600" [ref=e231]
+                - row "3 Dr.Sinchana . Navachethana Hospital Bengaluru 9035026655" [ref=e232]:
+                  - cell "3" [ref=e233]
+                  - cell "Dr.Sinchana ." [ref=e234]
+                  - cell "Navachethana Hospital" [ref=e235]
+                  - cell "Bengaluru" [ref=e236]
+                  - cell "9035026655" [ref=e237]
+                - row "4 Dr.Jayvardan A Navachethana Hospital Bengaluru 9916116233" [ref=e238]:
+                  - cell "4" [ref=e239]
+                  - cell "Dr.Jayvardan A" [ref=e240]
+                  - cell "Navachethana Hospital" [ref=e241]
+                  - cell "Bengaluru" [ref=e242]
+                  - cell "9916116233" [ref=e243]
+                - row "5 Dr.B.V.S Reddy Aishwarya Clinic Bengaluru 9448104831" [ref=e244]:
+                  - cell "5" [ref=e245]
+                  - cell "Dr.B.V.S Reddy" [ref=e246]
+                  - cell "Aishwarya Clinic" [ref=e247]
+                  - cell "Bengaluru" [ref=e248]
+                  - cell "9448104831" [ref=e249]
+                - row "6 Dr.Kiran kumar Karthik Hospital Bengaluru 8930429472" [ref=e250]:
+                  - cell "6" [ref=e251]
+                  - cell "Dr.Kiran kumar" [ref=e252]
+                  - cell "Karthik Hospital" [ref=e253]
+                  - cell "Bengaluru" [ref=e254]
+                  - cell "8930429472" [ref=e255]
+                - row "7 Dr.Sanjay Valens Hospital Bengaluru 8199719206" [ref=e256]:
+                  - cell "7" [ref=e257]
+                  - cell "Dr.Sanjay" [ref=e258]
+                  - cell "Valens Hospital" [ref=e259]
+                  - cell "Bengaluru" [ref=e260]
+                  - cell "8199719206" [ref=e261]
+                - row "8 Dr.Test Doctor User CureO Raipur 8976543567" [ref=e262]:
+                  - cell "8" [ref=e263]
+                  - cell "Dr.Test Doctor User" [ref=e264]
+                  - cell "CureO" [ref=e265]
+                  - cell "Raipur" [ref=e266]
+                  - cell "8976543567" [ref=e267]
+                - row "9 Dr.Akash Amruth Hospital Bangalore Urban 9110823197" [ref=e268]:
+                  - cell "9" [ref=e269]
+                  - cell "Dr.Akash" [ref=e270]
+                  - cell "Amruth Hospital" [ref=e271]
+                  - cell "Bangalore Urban" [ref=e272]
+                  - cell "9110823197" [ref=e273]
+                - row "10 Dr.BHAVYA C Amruth Hospital Bangalore Urban 8123292649" [ref=e274]:
+                  - cell "10" [ref=e275]
+                  - cell "Dr.BHAVYA C" [ref=e276]
+                  - cell "Amruth Hospital" [ref=e277]
+                  - cell "Bangalore Urban" [ref=e278]
+                  - cell "8123292649" [ref=e279]
+            - generic [ref=e280]:
+              - combobox [ref=e282] [cursor=pointer]:
+                - option "5 Items Per Page"
+                - option "10 Items Per Page" [selected]
+                - option "15 Items Per Page"
+                - option "25 Items Per Page"
+                - option "50 Items Per Page"
+                - option "100 Items Per Page"
+              - list [ref=e284]:
+                - listitem [ref=e285]:
+                  - link "":
+                    - /url: javascript:void(0);
+                    - generic: 
+                - listitem [ref=e286]:
+                  - link "1" [ref=e287] [cursor=pointer]:
+                    - /url: javascript:void(0);
+                - listitem [ref=e288]:
+                  - link "2" [ref=e289] [cursor=pointer]:
+                    - /url: javascript:void(0);
+                - listitem [ref=e290]:
+                  - link "" [ref=e291] [cursor=pointer]:
+                    - /url: javascript:void(0);
+                    - generic [ref=e292]: 
+        - generic [ref=e294]:
+          - heading "Patients List (2698)" [level=4] [ref=e296]
+          - generic [ref=e299]:
+            - generic [ref=e301]:
+              - textbox "Search patients" [ref=e302] [cursor=pointer]
+              - generic [ref=e304]: 
+            - table [ref=e307]:
+              - rowgroup [ref=e308]:
+                - row "S.No Patient Name Facility Name City Phone DOB" [ref=e309]:
+                  - columnheader "S.No" [ref=e310]
+                  - columnheader "Patient Name" [ref=e311]
+                  - columnheader "Facility Name" [ref=e312]
+                  - columnheader "City" [ref=e313]
+                  - columnheader "Phone" [ref=e314]
+                  - columnheader "DOB" [ref=e315]
+              - rowgroup [ref=e316]:
+                - row "1 Abishek Sv CureO - 7418076286 17 Sep 2004" [ref=e317]:
+                  - cell "1" [ref=e318]
+                  - cell "Abishek Sv" [ref=e319]
+                  - cell "CureO" [ref=e320]
+                  - cell "-" [ref=e321]
+                  - cell "7418076286" [ref=e322]
+                  - cell "17 Sep 2004" [ref=e323]
+                - row "2 Sandra Santhosh CureO - 9526053526 08 Jun 2004" [ref=e324]:
+                  - cell "2" [ref=e325]
+                  - cell "Sandra Santhosh" [ref=e326]
+                  - cell "CureO" [ref=e327]
+                  - cell "-" [ref=e328]
+                  - cell "9526053526" [ref=e329]
+                  - cell "08 Jun 2004" [ref=e330]
+                - row "3 Mandashisha Wann CureO - 9612354981 01 Jun 2002" [ref=e331]:
+                  - cell "3" [ref=e332]
+                  - cell "Mandashisha Wann" [ref=e333]
+                  - cell "CureO" [ref=e334]
+                  - cell "-" [ref=e335]
+                  - cell "9612354981" [ref=e336]
+                  - cell "01 Jun 2002" [ref=e337]
+                - row "4 Jobin Vk CureO - 7034426078 28 Aug 2005" [ref=e338]:
+                  - cell "4" [ref=e339]
+                  - cell "Jobin Vk" [ref=e340]
+                  - cell "CureO" [ref=e341]
+                  - cell "-" [ref=e342]
+                  - cell "7034426078" [ref=e343]
+                  - cell "28 Aug 2005" [ref=e344]
+                - row "5 Yndameiaki Nongrum CureO - 8794419267 18 Dec 2001" [ref=e345]:
+                  - cell "5" [ref=e346]
+                  - cell "Yndameiaki Nongrum" [ref=e347]
+                  - cell "CureO" [ref=e348]
+                  - cell "-" [ref=e349]
+                  - cell "8794419267" [ref=e350]
+                  - cell "18 Dec 2001" [ref=e351]
+                - row "6 Daphira Kharkongor CureO - 9036197590 24 Oct 2003" [ref=e352]:
+                  - cell "6" [ref=e353]
+                  - cell "Daphira Kharkongor" [ref=e354]
+                  - cell "CureO" [ref=e355]
+                  - cell "-" [ref=e356]
+                  - cell "9036197590" [ref=e357]
+                  - cell "24 Oct 2003" [ref=e358]
+                - row "7 Kathryn Lyngdoh CureO - 7085871628 08 Feb 2002" [ref=e359]:
+                  - cell "7" [ref=e360]
+                  - cell "Kathryn Lyngdoh" [ref=e361]
+                  - cell "CureO" [ref=e362]
+                  - cell "-" [ref=e363]
+                  - cell "7085871628" [ref=e364]
+                  - cell "08 Feb 2002" [ref=e365]
+                - row "8 Sisi Mary Kurbah CureO - 6009700094 25 Apr 2001" [ref=e366]:
+                  - cell "8" [ref=e367]
+                  - cell "Sisi Mary Kurbah" [ref=e368]
+                  - cell "CureO" [ref=e369]
+                  - cell "-" [ref=e370]
+                  - cell "6009700094" [ref=e371]
+                  - cell "25 Apr 2001" [ref=e372]
+                - row "9 Jayasurya Babu CureO - 9632557287 14 Jun 2006" [ref=e373]:
+                  - cell "9" [ref=e374]
+                  - cell "Jayasurya Babu" [ref=e375]
+                  - cell "CureO" [ref=e376]
+                  - cell "-" [ref=e377]
+                  - cell "9632557287" [ref=e378]
+                  - cell "14 Jun 2006" [ref=e379]
+                - row "10 Usha Rani CureO - 9945392189 29 Aug 1989" [ref=e380]:
+                  - cell "10" [ref=e381]
+                  - cell "Usha Rani" [ref=e382]
+                  - cell "CureO" [ref=e383]
+                  - cell "-" [ref=e384]
+                  - cell "9945392189" [ref=e385]
+                  - cell "29 Aug 1989" [ref=e386]
+            - generic [ref=e387]:
+              - combobox [ref=e389] [cursor=pointer]:
+                - option "5 Items Per Page"
+                - option "10 Items Per Page" [selected]
+                - option "15 Items Per Page"
+                - option "25 Items Per Page"
+                - option "50 Items Per Page"
+                - option "100 Items Per Page"
+              - list [ref=e391]:
+                - listitem [ref=e392]:
+                  - link "":
+                    - /url: javascript:void(0);
+                    - generic: 
+                - listitem [ref=e393]:
+                  - link "1" [ref=e394] [cursor=pointer]:
+                    - /url: javascript:void(0);
+                - listitem [ref=e395]:
+                  - link "2" [ref=e396] [cursor=pointer]:
+                    - /url: javascript:void(0);
+                - listitem [ref=e397]:
+                  - link "3" [ref=e398] [cursor=pointer]:
+                    - /url: javascript:void(0);
+                - listitem [ref=e399]:
+                  - generic [ref=e400]: ...
+                - listitem [ref=e401]:
+                  - link "270" [ref=e402] [cursor=pointer]:
+                    - /url: javascript:void(0);
+                - listitem [ref=e403]:
+                  - link "" [ref=e404] [cursor=pointer]:
+                    - /url: javascript:void(0);
+                    - generic [ref=e405]: 
+      - generic [ref=e408]:
+        - heading "Facility List (11)" [level=4] [ref=e410]
+        - generic [ref=e413]:
+          - generic [ref=e415]:
+            - textbox "Search facilities" [ref=e416] [cursor=pointer]
+            - generic [ref=e418]: 
+          - table [ref=e421]:
+            - rowgroup [ref=e422]:
+              - row "S.No Facility Name Facility Type City Phone Category Affiliation" [ref=e423]:
+                - columnheader "S.No" [ref=e424]
+                - columnheader "Facility Name" [ref=e425]
+                - columnheader "Facility Type" [ref=e426]
+                - columnheader "City" [ref=e427]
+                - columnheader "Phone" [ref=e428]
+                - columnheader "Category" [ref=e429]
+                - columnheader "Affiliation" [ref=e430]
+            - rowgroup [ref=e431]:
+              - row "1 Amruth Hospital Hospital Bangalore Rural 9886388395 Allopathy External" [ref=e432]:
+                - cell "1" [ref=e433]
+                - cell "Amruth Hospital" [ref=e434]
+                - cell "Hospital" [ref=e435]
+                - cell "Bangalore Rural" [ref=e436]
+                - cell "9886388395" [ref=e437]
+                - cell "Allopathy" [ref=e438]
+                - cell "External" [ref=e439]
+              - row "2 Valens Hospital Hospital Bengaluru 0000000000 Allopathy External" [ref=e440]:
+                - cell "2" [ref=e441]
+                - cell "Valens Hospital" [ref=e442]
+                - cell "Hospital" [ref=e443]
+                - cell "Bengaluru" [ref=e444]
+                - cell "0000000000" [ref=e445]
+                - cell "Allopathy" [ref=e446]
+                - cell "External" [ref=e447]
+              - row "3 Karthik Hospital Hospital Bengaluru 6361673634 Allopathy External" [ref=e448]:
+                - cell "3" [ref=e449]
+                - cell "Karthik Hospital" [ref=e450]
+                - cell "Hospital" [ref=e451]
+                - cell "Bengaluru" [ref=e452]
+                - cell "6361673634" [ref=e453]
+                - cell "Allopathy" [ref=e454]
+                - cell "External" [ref=e455]
+              - row "4 Vinayaka Hospital Hospital Bengaluru 9980955836 Allopathy External" [ref=e456]:
+                - cell "4" [ref=e457]
+                - cell "Vinayaka Hospital" [ref=e458]
+                - cell "Hospital" [ref=e459]
+                - cell "Bengaluru" [ref=e460]
+                - cell "9980955836" [ref=e461]
+                - cell "Allopathy" [ref=e462]
+                - cell "External" [ref=e463]
+              - row "5 Aishwarya Clinic Clinic Bengaluru 0804098337 Allopathy External" [ref=e464]:
+                - cell "5" [ref=e465]
+                - cell "Aishwarya Clinic" [ref=e466]
+                - cell "Clinic" [ref=e467]
+                - cell "Bengaluru" [ref=e468]
+                - cell "0804098337" [ref=e469]
+                - cell "Allopathy" [ref=e470]
+                - cell "External" [ref=e471]
+              - row "6 Rajalakshmi Hospital Hospital Bengaluru 9663136109 Allopathy External" [ref=e472]:
+                - cell "6" [ref=e473]
+                - cell "Rajalakshmi Hospital" [ref=e474]
+                - cell "Hospital" [ref=e475]
+                - cell "Bengaluru" [ref=e476]
+                - cell "9663136109" [ref=e477]
+                - cell "Allopathy" [ref=e478]
+                - cell "External" [ref=e479]
+              - row "7 Prolife Multispeciality Hospital Hospital Bengaluru 9900274002 Allopathy External" [ref=e480]:
+                - cell "7" [ref=e481]
+                - cell "Prolife Multispeciality Hospital" [ref=e482]
+                - cell "Hospital" [ref=e483]
+                - cell "Bengaluru" [ref=e484]
+                - cell "9900274002" [ref=e485]
+                - cell "Allopathy" [ref=e486]
+                - cell "External" [ref=e487]
+              - row "8 Navachethana Hospital Hospital Bengaluru 6361673634 Allopathy External" [ref=e488]:
+                - cell "8" [ref=e489]
+                - cell "Navachethana Hospital" [ref=e490]
+                - cell "Hospital" [ref=e491]
+                - cell "Bengaluru" [ref=e492]
+                - cell "6361673634" [ref=e493]
+                - cell "Allopathy" [ref=e494]
+                - cell "External" [ref=e495]
+              - row "9 Vivaa Hospital Hospital Bengaluru 9019749400 Allopathy External" [ref=e496]:
+                - cell "9" [ref=e497]
+                - cell "Vivaa Hospital" [ref=e498]
+                - cell "Hospital" [ref=e499]
+                - cell "Bengaluru" [ref=e500]
+                - cell "9019749400" [ref=e501]
+                - cell "Allopathy" [ref=e502]
+                - cell "External" [ref=e503]
+              - row "10 Eesha Multispeciality Hospital Hospital Bengaluru 9341097699 Allopathy External" [ref=e504]:
+                - cell "10" [ref=e505]
+                - cell "Eesha Multispeciality Hospital" [ref=e506]
+                - cell "Hospital" [ref=e507]
+                - cell "Bengaluru" [ref=e508]
+                - cell "9341097699" [ref=e509]
+                - cell "Allopathy" [ref=e510]
+                - cell "External" [ref=e511]
+          - generic [ref=e512]:
+            - combobox [ref=e514] [cursor=pointer]:
+              - option "5 Items Per Page"
+              - option "10 Items Per Page" [selected]
+              - option "15 Items Per Page"
+              - option "25 Items Per Page"
+              - option "50 Items Per Page"
+              - option "100 Items Per Page"
+            - list [ref=e516]:
+              - listitem [ref=e517]:
+                - link "":
+                  - /url: javascript:void(0);
+                  - generic: 
+              - listitem [ref=e518]:
+                - link "1" [ref=e519] [cursor=pointer]:
+                  - /url: javascript:void(0);
+              - listitem [ref=e520]:
+                - link "2" [ref=e521] [cursor=pointer]:
+                  - /url: javascript:void(0);
+              - listitem [ref=e522]:
+                - link "" [ref=e523] [cursor=pointer]:
+                  - /url: javascript:void(0);
+                  - generic [ref=e524]: 
+      - generic [ref=e527]:
+        - generic [ref=e529]:
+          - heading "Appointments (0)" [level=5] [ref=e530]
+          - link "Expand" [ref=e532] [cursor=pointer]:
+            - /url: /admin/all-appointments/1
+        - list [ref=e533]:
+          - listitem [ref=e534]:
+            - generic [ref=e535] [cursor=pointer]: Upcoming Appointments
+          - listitem [ref=e536]:
+            - generic [ref=e537] [cursor=pointer]: Past Appointments
+        - generic [ref=e540]:
+          - generic [ref=e542]:
+            - textbox "Search upcoming appointments" [ref=e543] [cursor=pointer]
+            - generic [ref=e545]: 
+          - table [ref=e548]:
+            - rowgroup [ref=e549]:
+              - row "S.No Patient Name Doctor Name Facility Name Type Appointment Time Status" [ref=e550]:
+                - columnheader "S.No" [ref=e551]
+                - columnheader "Patient Name" [ref=e552]
+                - columnheader "Doctor Name" [ref=e553]
+                - columnheader "Facility Name" [ref=e554]
+                - columnheader "Type" [ref=e555]
+                - columnheader "Appointment Time" [ref=e556]
+                - columnheader "Status" [ref=e557]
+            - rowgroup [ref=e558]:
+              - row "No Upcoming Appointments" [ref=e559]:
+                - cell "No Upcoming Appointments" [ref=e560]
+          - combobox [ref=e563] [cursor=pointer]:
+            - option "5 Items Per Page" [selected]
+            - option "10 Items Per Page"
+            - option "15 Items Per Page"
+            - option "25 Items Per Page"
+            - option "50 Items Per Page"
+            - option "100 Items Per Page"
+      - generic [ref=e566]:
+        - heading "Follow ups (6)" [level=5] [ref=e569]
+        - generic [ref=e572]:
+          - generic [ref=e574]:
+            - textbox "Search" [ref=e575] [cursor=pointer]
+            - generic [ref=e577]: 
+          - table [ref=e580]:
+            - rowgroup [ref=e581]:
+              - row "S.No Facility Name Patient Name Prescribed by Prescription Date Action" [ref=e582]:
+                - columnheader "S.No" [ref=e583]
+                - columnheader "Facility Name" [ref=e584]
+                - columnheader "Patient Name" [ref=e585]
+                - columnheader "Prescribed by" [ref=e586]
+                - columnheader "Prescription Date" [ref=e587]
+                - columnheader "Action" [ref=e588]
+            - rowgroup [ref=e589]:
+              - row "1 Karthik Hospital Bhavani EP Dr.Kiran kumar 10 Jan 2026 Review" [ref=e590]:
+                - cell "1" [ref=e591]:
+                  - link "1" [ref=e592] [cursor=pointer]:
+                    - /url: javascript:void(0);
+                - cell "Karthik Hospital" [ref=e593]
+                - cell "Bhavani EP" [ref=e594]
+                - cell "Dr.Kiran kumar" [ref=e595]
+                - cell "10 Jan 2026" [ref=e596]
+                - cell "Review" [ref=e597]:
+                  - button "Review" [ref=e598] [cursor=pointer]
+              - row "2 CureO Test Patient Dr.Test Doctor User 05 Mar 2026 Review" [ref=e599]:
+                - cell "2" [ref=e600]:
+                  - link "2" [ref=e601] [cursor=pointer]:
+                    - /url: javascript:void(0);
+                - cell "CureO" [ref=e602]
+                - cell "Test Patient" [ref=e603]
+                - cell "Dr.Test Doctor User" [ref=e604]
+                - cell "05 Mar 2026" [ref=e605]
+                - cell "Review" [ref=e606]:
+                  - button "Review" [ref=e607] [cursor=pointer]
+              - row "3 CureO Test Patient Dr.Test Doctor User 10 Mar 2026 Review" [ref=e608]:
+                - cell "3" [ref=e609]:
+                  - link "3" [ref=e610] [cursor=pointer]:
+                    - /url: javascript:void(0);
+                - cell "CureO" [ref=e611]
+                - cell "Test Patient" [ref=e612]
+                - cell "Dr.Test Doctor User" [ref=e613]
+                - cell "10 Mar 2026" [ref=e614]
+                - cell "Review" [ref=e615]:
+                  - button "Review" [ref=e616] [cursor=pointer]
+              - row "4 CureO Test Patient Dr.Test Doctor User 11 Mar 2026 Review" [ref=e617]:
+                - cell "4" [ref=e618]:
+                  - link "4" [ref=e619] [cursor=pointer]:
+                    - /url: javascript:void(0);
+                - cell "CureO" [ref=e620]
+                - cell "Test Patient" [ref=e621]
+                - cell "Dr.Test Doctor User" [ref=e622]
+                - cell "11 Mar 2026" [ref=e623]
+                - cell "Review" [ref=e624]:
+                  - button "Review" [ref=e625] [cursor=pointer]
+              - row "5 CureO Test Patient Dr.Test Doctor User 13 Mar 2026 Review" [ref=e626]:
+                - cell "5" [ref=e627]:
+                  - link "5" [ref=e628] [cursor=pointer]:
+                    - /url: javascript:void(0);
+                - cell "CureO" [ref=e629]
+                - cell "Test Patient" [ref=e630]
+                - cell "Dr.Test Doctor User" [ref=e631]
+                - cell "13 Mar 2026" [ref=e632]
+                - cell "Review" [ref=e633]:
+                  - button "Review" [ref=e634] [cursor=pointer]
+              - row "6 CureO Test Patient Dr.Test Doctor User 13 Mar 2026 Review" [ref=e635]:
+                - cell "6" [ref=e636]:
+                  - link "6" [ref=e637] [cursor=pointer]:
+                    - /url: javascript:void(0);
+                - cell "CureO" [ref=e638]
+                - cell "Test Patient" [ref=e639]
+                - cell "Dr.Test Doctor User" [ref=e640]
+                - cell "13 Mar 2026" [ref=e641]
+                - cell "Review" [ref=e642]:
+                  - button "Review" [ref=e643] [cursor=pointer]
+          - combobox [ref=e646] [cursor=pointer]:
+            - option "5 Items Per Page"
+            - option "10 Items Per Page" [selected]
+            - option "15 Items Per Page"
+            - option "25 Items Per Page"
+            - option "50 Items Per Page"
+            - option "100 Items Per Page"
+    - button "Toggle chat assistant" [ref=e647] [cursor=pointer]:
+      - generic [ref=e648]: 
+      - generic [ref=e649]: Healthcare Assistant
+  - generic:   ● ● ● ●  X X X X      X                  ՗                ͼ              X
+```
+
+# Test source
+
+```ts
+  1  | 
+  2  | class LoginPage{
+  3  |     constructor(page)
+  4  |     {
+  5  |         this.page = page;
+  6  |     //     this.userName = page.locator("#userEmail");
+  7  |     //     this.password = page.locator("#userPassword");
+  8  |     //     this.loginButton = page.locator("[value='Login']");
+  9  |      this.userName = page.getByLabel("Username");
+  10 |     this.password = page.getByLabel("Password");
+  11 |    this.loginButton = page.getByRole("button", {name : "Login"});
+  12 |      }
+  13 | 
+  14 |     async navigateToURL(){
+  15 |         //await this.page.goto("https://rahulshettyacademy.com/client");
+  16 |         await this.page.goto("https://emrv2.assaycr.in/");
+  17 |     }
+  18 | 
+  19 |     async validLogin(username, userpassword)
+  20 |     {
+  21 |         await this.userName.fill(username);
+  22 |         await this.password.fill(userpassword);
+  23 |         await this.loginButton.click();
+> 24 |         await this.page.locator(".card-body b").first().waitFor();
+     |                                                         ^ Error: locator.waitFor: Test timeout of 30000ms exceeded.
+  25 | 
+  26 |     }
+  27 | 
+  28 | }
+  29 | module.exports = {LoginPage};
+```

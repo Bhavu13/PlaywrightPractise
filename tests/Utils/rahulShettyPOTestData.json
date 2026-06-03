@@ -1,0 +1,17 @@
+[{
+    "username" : "anshika@gmail.com",
+    "userpassword" : "Iamking@000",
+   "productName" : "ZARA COAT 3" ,
+   "countryCode" : "ind",
+   "countryName" : "India",
+   "orderConfirmationText" : " Thankyou for the order. "
+},
+{
+    "username" : "rahulshetty@gmail.com",
+    "userpassword" : "Iamking@000",
+   "productName" : "Adidas Originals" ,
+   "countryCode" : "united",
+   "countryName" : "United Kingdom",
+   "orderConfirmationText" : " Thankyou for the order. "
+}
+]
