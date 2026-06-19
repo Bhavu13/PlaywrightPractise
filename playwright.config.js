@@ -7,6 +7,7 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './tests',
+  //retries : 2,
  
   use: {
    headless : false,
@@ -21,8 +22,27 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: { //...devices['Desktop Chrome'],
+            browserName : 'chromium',
+            headless : false,
+             screenshot: 'only-on-failure',
+        video: 'retain-on-failure',
+        trace: 'on-first-retry'
+           // ignoreHTTPSErrors: true,
+       },
     },
+    // {
+    //   name : 'firefox',
+    //   use : {
+    //     browserName : 'firefox',
+    //         headless : true,
+    //         screenshot : 'only-on-failure',
+    //         trace : 'on',
+    //         video : 'retain-on-failure',
+
+    //   },
+    // },
   ]
+  
 });
 
