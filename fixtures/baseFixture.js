@@ -8,10 +8,15 @@ const { POManager } = require("../pages/POManager");
     const username = "superadmin@assaycr.com";
     const userpassword = "Admin@123";
 
+       console.log("Fixture Started");
+
+
       const poManager = new POManager(page);
       const login = poManager.getLoginPage();
       await login.navigateToURL("https://emrv2.assaycr.in/");
       await login.validLogin(username,userpassword);
+
+      console.log("Fixture Completed");
 
       await use(page);
    }
